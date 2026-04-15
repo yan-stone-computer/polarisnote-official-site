@@ -143,9 +143,17 @@
     // ─── 下载按钮交互 ───
     document.querySelectorAll('.dl-platform').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            e.preventDefault();
             const platform = btn.dataset.platform;
-            showNotification(`正在准备 ${platform} 版本下载...`);
+            const href = btn.getAttribute('href');
+
+            // 如果链接是 # 或未设置，阻止默认行为并显示提示
+            if (!href || href === '#') {
+                e.preventDefault();
+                showNotification(`${platform} 版本即将推出，敬请期待！`);
+            } else {
+                // 有有效链接，显示下载提示并允许默认下载行为
+                showNotification(`正在下载 ${platform} 版本...`);
+            }
         });
     });
 
