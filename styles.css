@@ -4,12 +4,12 @@
 
 /* --- CSS Variables --- */
 :root {
-    --c-primary: #4f46e5;
-    --c-primary-light: #6366f1;
-    --c-primary-lighter: #818cf8;
-    --c-primary-bg: #eef2ff;
-    --c-accent: #0ea5e9;
-    --c-accent-bg: #f0f9ff;
+    --c-primary: #7e57c2;
+    --c-primary-light: #9575cd;
+    --c-primary-lighter: #b39ddb;
+    --c-primary-bg: #f3e5f5;
+    --c-accent: #7e57c2;
+    --c-accent-bg: #f3e5f5;
 
     --c-text: #1e293b;
     --c-text-secondary: #475569;
@@ -30,7 +30,7 @@
     --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
     --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
     --shadow-xl: 0 24px 48px rgba(0,0,0,0.10);
-    --shadow-glow: 0 0 60px rgba(79,70,229,0.15);
+    --shadow-glow: 0 0 60px rgba(126,87,194,0.15);
 
     --radius-sm: 6px;
     --radius-md: 10px;
@@ -690,6 +690,40 @@ a {
 .feature-block-img {
     display: flex;
     justify-content: center;
+}
+
+.feature-block-img-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.feature-block-img-dual .img-frame {
+    max-width: 280px;
+}
+
+.feature-block-img-dual .img-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.feature-block-img-triple {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: start;
+}
+
+.feature-block-img-triple .img-frame {
+    max-width: 200px;
+}
+
+.feature-block-img-triple .img-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .img-frame {
