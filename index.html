@@ -28,7 +28,7 @@
                 <li><a href="#features" class="nav-link">功能展示</a></li>
                 <li><a href="#highlights" class="nav-link">核心亮点</a></li>
                 <li><a href="#tech" class="nav-link">技术架构</a></li>
-                <li><a href="#download" class="nav-link">获取软件</a></li>
+                <li><a href="#get" class="nav-link">获取软件</a></li>
             </ul>
             <button class="nav-mobile-btn" id="navMobileBtn" aria-label="菜单">
                 <span></span><span></span><span></span>
@@ -57,7 +57,7 @@
                     Windows / macOS / Linux 全平台完美支持。
                 </p>
                 <div class="hero-actions">
-                    <a href="#download" class="btn btn-fill">
+                    <a href="#get" class="btn btn-fill">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         立即下载
                     </a>
@@ -643,6 +643,13 @@
     </section>
 
     <section class="section section-get" id="get">
+        <div class="get-section-bg">
+            <div class="get-bg-gradient"></div>
+            <div class="get-bg-grid"></div>
+            <div class="get-orb get-orb-1"></div>
+            <div class="get-orb get-orb-2"></div>
+            <div class="get-orb get-orb-3"></div>
+        </div>
         <div class="section-inner">
             <div class="section-label center">
                 <span class="label-line"></span>
@@ -653,111 +660,150 @@
             <p class="section-subtitle reveal-scale">选择适合你平台的版本，开始高效笔记体验</p>
             
             <div class="get-container reveal-scale">
-                <div class="download-enhanced-card">
-                    <div class="download-decor-top"></div>
-                    <div class="download-decor-bottom"></div>
-                    
-                    <div class="download-enhanced-header">
-                        <div class="download-logo-icon">
-                            <svg width="40" height="40" viewBox="0 0 28 28" fill="none">
-                                <rect x="2" y="4" width="18" height="22" rx="3" fill="url(#logoGrad1)" opacity="0.9"/>
-                                <rect x="6" y="0" width="18" height="22" rx="3" fill="url(#logoGrad2)"/>
-                                <line x1="10" y1="6" x2="19" y2="6" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="10" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="10" y1="14" x2="15" y2="14" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                                <defs>
-                                    <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#3b82f6"/>
-                                        <stop offset="100%" stop-color="#1d4ed8"/>
-                                    </linearGradient>
-                                    <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#60a5fa"/>
-                                        <stop offset="100%" stop-color="#3b82f6"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
-                        <div class="download-head-text">
-                            <h2>下载 PolaristNote</h2>
-                            <p>选择适合你的平台版本</p>
-                        </div>
+                <div class="download-unified-section">
+                    <div class="unified-decoration-top">
+                        <div class="deco-circle deco-1"></div>
+                        <div class="deco-circle deco-2"></div>
+                        <div class="deco-circle deco-3"></div>
                     </div>
                     
-                    <div class="download-enhanced-platforms">
-                        <a href="https://github.com/yan-stone-computer/PolarisNote/releases/download/windowsPackage/palarisNoteApplication_community.zip" class="dl-platform-enhanced" data-platform="Windows">
-                            <div class="platform-icon-wrap">
-                                <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-                            </div>
-                            <div class="platform-text-wrap">
-                                <strong>Windows</strong>
-                                <span>Windows 10 / 11</span>
-                            </div>
-                            <div class="platform-action-wrap">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                            </div>
-                        </a>
-                        <a href="#" class="dl-platform-enhanced" data-platform="macOS">
-                            <div class="platform-icon-wrap">
-                                <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                            </div>
-                            <div class="platform-text-wrap">
-                                <strong>macOS</strong>
-                                <span>macOS 10.15+</span>
-                            </div>
-                            <div class="platform-action-wrap">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                            </div>
-                        </a>
-                        <a href="#" class="dl-platform-enhanced" data-platform="Linux">
-                            <div class="platform-icon-wrap">
-                                <img src="images/linux.svg" alt="Linux" style="width: 32px; height: 32px;">
-                            </div>
-                            <div class="platform-text-wrap">
-                                <strong>Linux</strong>
-                                <span>Ubuntu 20.04+</span>
-                            </div>
-                            <div class="platform-action-wrap">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                            </div>
-                        </a>
-                        <a href="https://github.com/yan-stone-computer/PolarisNote/releases" class="dl-platform-enhanced" data-platform="GitHub">
-                            <div class="platform-icon-wrap">
-                                <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    <div class="unified-content-wrapper">
+                        <div class="unified-header">
+                            <div class="product-logo-large">
+                                <svg width="64" height="64" viewBox="0 0 28 28" fill="none">
+                                    <rect x="2" y="4" width="18" height="22" rx="3" fill="url(#dlLogoGrad1)" opacity="0.9"/>
+                                    <rect x="6" y="0" width="18" height="22" rx="3" fill="url(#dlLogoGrad2)"/>
+                                    <line x1="10" y1="6" x2="19" y2="6" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                    <line x1="10" y1="10" x2="17" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                    <line x1="10" y1="14" x2="15" y2="14" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                    <defs>
+                                        <linearGradient id="dlLogoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#3b82f6"/>
+                                            <stop offset="100%" stop-color="#1d4ed8"/>
+                                        </linearGradient>
+                                        <linearGradient id="dlLogoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#60a5fa"/>
+                                            <stop offset="100%" stop-color="#3b82f6"/>
+                                        </linearGradient>
+                                    </defs>
                                 </svg>
                             </div>
-                            <div class="platform-text-wrap">
-                                <strong>GitHub</strong>
-                                <span>获取完整软件包</span>
+                            <div class="header-info">
+                                <h3 class="header-title">天枢便签 PolaristNote</h3>
+                                <p class="header-subtitle">新一代 AI 智能便签管理工具</p>
+                                <div class="header-badges">
+                                    <span class="hbadge">
+                                        <span class="badge-dot pulse"></span>
+                                        v1.0.0
+                                    </span>
+                                    <span class="hbadge">完全免费</span>
+                                    <span class="hbadge">开源软件</span>
+                                </div>
                             </div>
-                            <div class="platform-action-wrap">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                        
+                        <div class="unified-stats">
+                            <div class="stat-block">
+                                <span class="stat-value">20+</span>
+                                <span class="stat-label">核心功能</span>
                             </div>
-                        </a>
+                            <div class="stat-divider"></div>
+                            <div class="stat-block">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">支持平台</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-block">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label">隐私安全</span>
+                            </div>
+                        </div>
+                        
+                        <div class="unified-platforms">
+                            <a href="https://github.com/yan-stone-computer/PolarisNote/releases/download/windowsPackage/palarisNoteApplication_community.zip" class="platform-btn platform-windows" target="_blank">
+                                <div class="pbtn-glow"></div>
+                                <div class="pbtn-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                                </div>
+                                <div class="pbtn-text">
+                                    <strong>Windows</strong>
+                                    <span>推荐下载</span>
+                                </div>
+                                <div class="pbtn-arrow">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="platform-btn platform-mac" onclick="showToast('macOS 版本正在准备中，敬请期待！'); return false;">
+                                <div class="pbtn-glow"></div>
+                                <div class="pbtn-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                                </div>
+                                <div class="pbtn-text">
+                                    <strong>macOS</strong>
+                                    <span>即将上线</span>
+                                </div>
+                                <div class="pbtn-arrow">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="platform-btn platform-linux" onclick="showToast('Linux 版本正在准备中，敬请期待！'); return false;">
+                                <div class="pbtn-glow"></div>
+                                <div class="pbtn-icon">
+                                    <img src="images/linux.svg" alt="Linux" style="width: 28px; height: 28px;">
+                                </div>
+                                <div class="pbtn-text">
+                                    <strong>Linux</strong>
+                                    <span>即将上线</span>
+                                </div>
+                                <div class="pbtn-arrow">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                </div>
+                            </a>
+                            
+                            <a href="https://github.com/yan-stone-computer/PolarisNote/releases" class="platform-btn platform-github" target="_blank">
+                                <div class="pbtn-glow"></div>
+                                <div class="pbtn-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </div>
+                                <div class="pbtn-text">
+                                    <strong>GitHub</strong>
+                                    <span>更多下载</span>
+                                </div>
+                                <div class="pbtn-arrow">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="unified-features">
+                            <div class="feature-chip">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                永久免费
+                            </div>
+                            <div class="feature-chip">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                无需注册
+                            </div>
+                            <div class="feature-chip">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                无内购
+                            </div>
+                            <div class="feature-chip">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                隐私安全
+                            </div>
+                            <div class="feature-chip">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                跨平台
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="download-enhanced-footer">
-                        <div class="download-enhanced-meta">
-                            <span class="version-badge">v1.0.0</span>
-                            <span class="free-badge">完全免费</span>
-                            <span class="open-badge">开源软件</span>
-                        </div>
-                        <div class="download-enhanced-stats">
-                            <div class="stat-item-enhanced">
-                                <span class="stat-num-enhanced">20+</span>
-                                <span class="stat-label-enhanced">核心功能</span>
-                            </div>
-                            <div class="stat-divider-enhanced"></div>
-                            <div class="stat-item-enhanced">
-                                <span class="stat-num-enhanced">4</span>
-                                <span class="stat-label-enhanced">平台支持</span>
-                            </div>
-                            <div class="stat-divider-enhanced"></div>
-                            <div class="stat-item-enhanced">
-                                <span class="stat-num-enhanced">100%</span>
-                                <span class="stat-label-enhanced">隐私安全</span>
-                            </div>
-                        </div>
+                    
+                    <div class="unified-decoration-bottom">
+                        <div class="deco-line"></div>
+                        <div class="deco-dot"></div>
                     </div>
                 </div>
             </div>
@@ -785,7 +831,7 @@
                         <h5>产品</h5>
                         <a href="#features">功能展示</a>
                         <a href="#highlights">核心亮点</a>
-                        <a href="#download">下载安装</a>
+                        <a href="#get">下载安装</a>
                     </div>
                     <div class="footer-col">
                         <h5>资源</h5>

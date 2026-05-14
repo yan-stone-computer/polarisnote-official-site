@@ -5,6 +5,52 @@
 (function () {
     'use strict';
 
+    // ─── Toast 通知函数 ───
+    window.showToast = function(message) {
+        let toast = document.querySelector('.toast-notification');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.className = 'toast-notification';
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 28px;
+                right: 28px;
+                background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+                color: white;
+                padding: 16px 28px;
+                border-radius: 12px;
+                font-size: 14px;
+                font-weight: 500;
+                box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.05);
+                z-index: 9999;
+                transform: translateY(20px) scale(0.95);
+                opacity: 0;
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            `;
+            
+            const icon = document.createElement('span');
+            icon.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`;
+            toast.appendChild(icon);
+            
+            document.body.appendChild(toast);
+        }
+
+        toast.lastChild.textContent = message;
+        requestAnimationFrame(() => {
+            toast.style.transform = 'translateY(0) scale(1)';
+            toast.style.opacity = '1';
+        });
+
+        setTimeout(() => {
+            toast.style.transform = 'translateY(20px) scale(0.95)';
+            toast.style.opacity = '0';
+        }, 3000);
+    };
+
     // ─── 导航栏 ───
     const navbar = document.getElementById('navbar');
     const navMobileBtn = document.getElementById('navMobileBtn');
@@ -195,10 +241,60 @@
 
             if (!href || href === '#') {
                 e.preventDefault();
-                showNotification(`${platform} 版本即将推出，敬请期待！`);
+                showToast(`${platform} 版本即将推出，敬请期待！`);
             } else {
-                showNotification(`正在下载 ${platform} 版本...`);
+                showToast(`正在下载 ${platform} 版本...`);
             }
+        });
+    });
+
+    // ─── 平台卡片粒子效果 ───
+    function createParticleBurst(element, color) {
+        const rect = element.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        for (let i = 0; i < 12; i++) {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                width: 8px;
+                height: 8px;
+                background: ${color};
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 9998;
+                left: ${centerX}px;
+                top: ${centerY}px;
+                box-shadow: 0 0 10px ${color};
+            `;
+            
+            const angle = (i / 12) * Math.PI * 2;
+            const velocity = 80 + Math.random() * 60;
+            const dx = Math.cos(angle) * velocity;
+            const dy = Math.sin(angle) * velocity;
+            
+            document.body.appendChild(particle);
+            
+            particle.animate([
+                { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+                { transform: `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) scale(0)`, opacity: 0 }
+            ], {
+                duration: 600,
+                easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
+            }).onfinish = () => particle.remove();
+        }
+    }
+
+    document.querySelectorAll('.platform-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            let color = 'rgba(59, 130, 246, 0.8)';
+            if (card.classList.contains('platform-windows')) color = 'rgba(59, 130, 246, 0.8)';
+            else if (card.classList.contains('platform-mac')) color = 'rgba(148, 163, 184, 0.8)';
+            else if (card.classList.contains('platform-linux')) color = 'rgba(249, 115, 22, 0.8)';
+            else if (card.classList.contains('platform-github')) color = 'rgba(129, 140, 248, 0.8)';
+            
+            createParticleBurst(card, color);
         });
     });
 
