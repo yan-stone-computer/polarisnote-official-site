@@ -50,12 +50,57 @@
         });
     });
 
-    // ─── 滚动揭示动画 ───
+    // ─── 滚动进度条 ───
+    function createScrollProgress() {
+        const progressBar = document.createElement('div');
+        progressBar.className = 'scroll-progress';
+        document.body.appendChild(progressBar);
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            progressBar.style.width = `${progress}%`;
+        });
+    }
+    createScrollProgress();
+
+    // ─── 粒子背景 ───
+    function createParticles() {
+        const container = document.createElement('div');
+        container.className = 'particles-container';
+        document.body.appendChild(container);
+
+        const particleCount = 25;
+        for (let i = 0; i < particleCount; i++) {
+            createParticle(container);
+        }
+
+        function createParticle(container) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            const size = Math.random() * 8 + 3;
+            const left = Math.random() * 100;
+            const duration = Math.random() * 15 + 10;
+            const delay = Math.random() * 15;
+            
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${left}%`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `-${delay}s`;
+            
+            container.appendChild(particle);
+        }
+    }
+    createParticles();
+
+    // ─── 滚动揭示动画增强版 ───
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
             }
         });
     }, {
@@ -64,7 +109,10 @@
         threshold: 0.08
     });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    // 观察所有 reveal 元素
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-rotate').forEach(el => {
+        revealObserver.observe(el);
+    });
 
     // ─── 数字递增动画 ───
     const statNums = document.querySelectorAll('.stat-num[data-target]');
@@ -87,7 +135,6 @@
         function update(now) {
             const elapsed = now - start;
             const progress = Math.min(elapsed / duration, 1);
-            // ease-out cubic
             const ease = 1 - Math.pow(1 - progress, 3);
             el.textContent = Math.round(target * ease);
             if (progress < 1) {
@@ -97,7 +144,7 @@
         requestAnimationFrame(update);
     }
 
-    // ─── Hero 鼠标视差 ───
+    // ─── Hero 鼠标视差增强版 ───
     const heroVisual = document.querySelector('.hero-visual');
     if (heroVisual) {
         const hero = document.getElementById('hero');
@@ -146,12 +193,10 @@
             const platform = btn.dataset.platform;
             const href = btn.getAttribute('href');
 
-            // 如果链接是 # 或未设置，阻止默认行为并显示提示
             if (!href || href === '#') {
                 e.preventDefault();
                 showNotification(`${platform} 版本即将推出，敬请期待！`);
             } else {
-                // 有有效链接，显示下载提示并允许默认下载行为
                 showNotification(`正在下载 ${platform} 版本...`);
             }
         });
@@ -219,12 +264,107 @@
         if (section.id) sectionObserver.observe(section);
     });
 
-    // ─── 页面加载 ───
+    // ─── 为元素添加随机动画延迟 ───
+    function addStaggerDelay() {
+        const featureBlocks = document.querySelectorAll('.feature-block');
+        featureBlocks.forEach((block, index) => {
+            block.style.transitionDelay = `${index * 0.08}s`;
+        });
+
+        const highlightCards = document.querySelectorAll('.hl-card');
+        highlightCards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.06}s`;
+        });
+
+        const techCards = document.querySelectorAll('.tech-card');
+        techCards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.05}s`;
+        });
+    }
+    addStaggerDelay();
+
+    // ─── 为卡片添加3D倾斜效果 ───
+    function add3DCardTilt() {
+        const cards = document.querySelectorAll('.hl-card, .tech-card, .ov-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                
+                card.style.transform = `
+                    perspective(1000px)
+                    rotateX(${-y * 5}deg)
+                    rotateY(${x * 5}deg)
+                    translateY(-8px)
+                    scale(1.02)
+                `;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    }
+    add3DCardTilt();
+
+    // ─── 为按钮添加涟漪效果 ───
+    function addRippleEffect() {
+        document.querySelectorAll('.btn, .github-btn, .dl-platform').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.3);
+                    left: ${x}px;
+                    top: ${y}px;
+                    animation: ripple-effect 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            @keyframes ripple-effect {
+                0% {
+                    transform: scale(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(3);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(rippleStyle);
+    }
+    addRippleEffect();
+
+    // ─── 页面加载动画 ───
     document.addEventListener('DOMContentLoaded', () => {
         document.body.style.opacity = '0';
-        document.body.style.transition = 'opacity 0.4s ease';
+        document.body.style.transition = 'opacity 0.6s ease';
+        
         requestAnimationFrame(() => {
-            document.body.style.opacity = '1';
+            requestAnimationFrame(() => {
+                document.body.style.opacity = '1';
+            });
         });
     });
 
