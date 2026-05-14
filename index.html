@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>天枢便签 Palaris Note - 智能便签管理工具</title>
+    <title>天枢便签 PolaristNote - 智能便签管理工具</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 顶部导航 -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="#" class="nav-brand">
@@ -37,7 +36,6 @@
         </div>
     </nav>
 
-    <!-- Hero 首屏 -->
     <header class="hero" id="hero">
         <div class="hero-bg-grid"></div>
         <div class="hero-glow hero-glow-1"></div>
@@ -46,40 +44,42 @@
             <div class="hero-text">
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
-                    完全开源 · 全平台覆盖 · AI 原生驱动
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.61-.52 1.09-1.13 1.5-1.81"></path><path d="M12 13.5V22"></path><path d="M18.5 16.5c1.5 1.26 2 5 2 5s-3.74-.5-5-2c-.61-.52-1.09-1.13-1.5-1.81"></path><path d="M12 13.5a2.5 2.5 0 1 0 0-5a2.5 2.5 0 1 0 0 5Z"></path><path d="M12 3c.68 0 1.31.28 1.78.78l4.95 4.95a2.5 2.5 0 1 1-3.54 3.54L12 8.54 8.81 11.73a2.5 2.5 0 1 1-3.54-3.54L10.22 3.78A2.5 2.5 0 0 1 12 3Z"></path></svg>
+                    开源免费 · 全平台覆盖 · AI 原生驱动
                 </div>
                 <h1 class="hero-title">
-                    天枢便签<br>
-                    <span class="hero-title-accent">Palaris Note</span>
+                    重新定义笔记体验<br>
+                    <span class="hero-title-accent">PolaristNote</span>
                 </h1>
                 <p class="hero-desc">
-                    一款将 AI 智能助手、看板式任务管理与富文本便签编辑深度融合的<br>
-                    新一代桌面效率工具。基于 Qt 6 + C++ 构建，原生支持 Windows / macOS / Linux 三大平台。
+                    融合 AI 智能助手、看板式管理与富文本编辑于一体的下一代效率神器。
+                    让你的灵感、工作流更智能、更高效、更优雅。基于 Qt 6 原生构建，
+                    Windows / macOS / Linux 全平台完美支持。
                 </p>
                 <div class="hero-actions">
                     <a href="#download" class="btn btn-fill">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                        免费下载
+                        立即下载
                     </a>
-                    <a href="#overview" class="btn btn-ghost">
-                        了解更多
+                    <a href="#features" class="btn btn-ghost">
+                        探索功能
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                     </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-num" data-target="12">0</span>
-                        <span class="stat-label">核心功能模块</span>
+                        <span class="stat-num" data-target="20">0</span>
+                        <span class="stat-label">核心功能</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-num" data-target="3">0</span>
-                        <span class="stat-label">跨平台支持</span>
+                        <span class="stat-num" data-target="100">0</span>
+                        <span class="stat-label">% 开源免费</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
-                        <span class="stat-num" data-target="6">0</span>
-                        <span class="stat-label">AI 智能能力</span>
+                        <span class="stat-num" data-target="10">0</span>
+                        <span class="stat-label">+ AI 能力</span>
                     </div>
                 </div>
             </div>
@@ -92,12 +92,12 @@
                                 <span class="fd fd-y"></span>
                                 <span class="fd fd-g"></span>
                             </div>
-                            <span class="frame-title">天枢便签 — 全部便签</span>
+                            <span class="frame-title">天枢便签 — 主界面</span>
                         </div>
-                        <img src="images/screenshot_1.png" alt="天枢便签主界面" class="screenshot-img">
+                        <img src="images/screenshot_14.png" alt="天枢便签主界面" class="screenshot-img">
                     </div>
                     <div class="screenshot-float screenshot-float-2">
-                        <img src="images/screenshot_2.png" alt="文档分析助手">
+                        <img src="images/智能客服.png" alt="智能客服">
                     </div>
                 </div>
             </div>
@@ -110,7 +110,6 @@
         </div>
     </header>
 
-    <!-- 项目概述 -->
     <section class="section section-overview" id="overview">
         <div class="section-inner">
             <div class="section-label">
@@ -119,22 +118,20 @@
             </div>
             <div class="overview-grid">
                 <div class="overview-text reveal">
-                    <h2 class="overview-heading">重新定义便签<br>让 AI 成为你的效率搭档</h2>
+                    <h2 class="overview-heading">你的笔记<br>值得更智能</h2>
                     <p class="overview-desc">
-                        天枢便签（Palaris Note）是一款基于 Qt 6 框架、采用现代 C++ 开发的跨平台桌面应用。
-                        我们将看板式任务管理、AI 智能助手与富文本编辑三大能力深度融合，
-                        打造了一款真正懂你工作流的效率工具——不只是记录，更是思考的延伸。
+                        PolaristNote 不仅仅是一款便签工具——它是你的效率伙伴、创意助手、思考延伸。
+                        基于强大的 Qt 6 架构，融合看板式管理和 AI 智能，让你的每个灵感都能被完美捕捉、组织与拓展。
                     </p>
                     <p class="overview-desc">
-                        所有数据本地存储，隐私安全零妥协；支持备份与 PDF、Markdown、HTML、Word 多格式导出，
-                        确保重要信息万无一失。无论是日常记录、项目管理还是学习笔记，
-                        天枢便签都能成为你可靠的效率伙伴。
+                        数据完全本地存储，隐私至上安全无忧；支持多种格式导出，重要信息永不丢失；
+                        无论是工作管理、学习笔记还是创意记录，PolaristNote 都能完美适配你的需求。
                     </p>
                     <div class="overview-tags">
-                        <span class="tag">Qt 框架</span>
-                        <span class="tag">C++ 开发</span>
+                        <span class="tag">Qt 6 架构</span>
+                        <span class="tag">高性能 C++</span>
                         <span class="tag">本地存储</span>
-                        <span class="tag">AI 集成</span>
+                        <span class="tag">AI 驱动</span>
                         <span class="tag">跨平台</span>
                         <span class="tag">开源免费</span>
                     </div>
@@ -168,7 +165,6 @@
         </div>
     </section>
 
-    <!-- 功能展示 -->
     <section class="section section-features" id="features">
         <div class="section-inner">
             <div class="section-label center">
@@ -176,320 +172,361 @@
                 功能展示
                 <span class="label-line"></span>
             </div>
-            <h2 class="section-title reveal">15 大核心功能，逐一演示</h2>
-            <p class="section-subtitle reveal">从创建便签到 AI 智能分析，每一步都为效率而生</p>
+            <h2 class="section-title reveal">18 大核心功能，逐一体验</h2>
+            <p class="section-subtitle reveal">从富文本编辑到 AI 智能分析，每个功能都为提升你的效率而生</p>
 
             <div class="features-showcase">
-                <!-- 功能1：看板式便签管理 -->
                 <div class="feature-block feature-block-left reveal">
                     <div class="feature-block-text">
                         <div class="feature-num">01</div>
-                        <h3>看板式便签管理</h3>
-                        <p>打开天枢便签，首先映入眼帘的就是看板式主界面。你可以创建多个任务栏，像 Trello 一样以看板视图组织所有便签——工作、学习、生活，一目了然。每张便签支持分类标签、日期标记和收藏置顶，配合实时搜索，瞬间定位任何内容。</p>
+                        <h3>富文本编辑界面</h3>
+                        <p>专业的富文本编辑器，支持多种格式的文本编辑。加粗、斜体、下划线、删除线，以及颜色设置，让你的内容排版更加美观。</p>
                         <ul class="feature-list">
-                            <li>创建多个任务栏，看板式布局一目了然</li>
-                            <li>5 种分类标签：作业 / 生活 / 随记 / 工作 / 学习</li>
-                            <li>收藏置顶 + 实时搜索 + 分页浏览</li>
-                            <li>回收站机制，误删可恢复</li>
+                            <li>完整的格式化工具栏</li>
+                            <li>字体颜色与背景色自由搭配</li>
+                            <li>列表、待办事项支持</li>
+                            <li>即时预览编辑效果</li>
                         </ul>
                     </div>
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_1.png" alt="便签管理界面">
+                            <img src="images/富文本编辑界面.png" alt="富文本编辑界面">
                         </div>
                     </div>
                 </div>
 
-                <!-- 功能2：文档分析助手 -->
                 <div class="feature-block feature-block-right reveal">
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_2.png" alt="文档分析助手">
+                            <img src="images/看板页面.png" alt="看板页面">
                         </div>
                     </div>
                     <div class="feature-block-text">
                         <div class="feature-num">02</div>
-                        <h3>文档分析助手</h3>
-                        <p>这是天枢便签最具亮点的 AI 功能之一。只需将 PDF、TXT、DOCX、HTML 或 Markdown 文件拖拽上传，AI 就会自动解析文档内容，生成结构化的思维导图和周报摘要——几秒钟完成过去需要半小时的阅读整理工作。</p>
+                        <h3>看板页面</h3>
+                        <p>直观的看板视图，让你一目了然地查看所有任务栏和便签。拖拽排序、快速筛选，工作效率翻倍。</p>
                         <ul class="feature-list">
-                            <li>支持 PDF / TXT / DOCX / HTML / Markdown 五种格式</li>
-                            <li>AI 自动生成思维导图，可视化文档结构</li>
-                            <li>一键生成周报摘要，提炼核心要点</li>
-                            <li>拖拽上传，操作零门槛</li>
+                            <li>多任务栏并列展示</li>
+                            <li>便签卡片可视化管理</li>
+                            <li>拖拽调整便签顺序</li>
+                            <li>快速定位与筛选</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- 功能3：富文本编辑 -->
                 <div class="feature-block feature-block-left reveal">
                     <div class="feature-block-text">
                         <div class="feature-num">03</div>
-                        <h3>富文本便签编辑</h3>
-                        <p>双击便签卡片即可进入编辑模式。编辑器提供完整的格式化工具栏：加粗、斜体、下划线、删除线、字体颜色、背景颜色，以及无序列表、有序列表和待办清单。内置 6 种便签颜色主题，让不同类型的笔记视觉上就能快速区分。</p>
+                        <h3>智能客服</h3>
+                        <p>内置 AI 智能客服助手，随时解答你的问题。无论是软件使用指导还是内容创作建议，都能快速响应。</p>
                         <ul class="feature-list">
-                            <li>完整格式化：加粗 / 斜体 / 下划线 / 删除线</li>
-                            <li>字体颜色与背景颜色自由搭配</li>
-                            <li>无序列表 / 有序列表 / 待办清单</li>
-                            <li>6 种便签颜色主题，一眼区分类型</li>
+                            <li>自然语言对话交互</li>
+                            <li>软件使用问题解答</li>
+                            <li>内容创作建议</li>
+                            <li>快捷指令支持</li>
                         </ul>
                     </div>
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_3.png" alt="富文本编辑">
+                            <img src="images/智能客服.png" alt="智能客服">
                         </div>
                     </div>
                 </div>
 
-                <!-- 功能4：智能提醒 -->
                 <div class="feature-block feature-block-right reveal">
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_4.png" alt="智能提醒">
+                            <img src="images/文件分析1.png" alt="文件分析">
                         </div>
                     </div>
                     <div class="feature-block-text">
                         <div class="feature-num">04</div>
-                        <h3>智能提醒系统</h3>
-                        <p>为任何便签设置提醒，支持精确到分钟的自定义时间，也可以快速选择"今天"或"明天"。重复周期覆盖每天、每周、每月、每年四种模式，内置多种铃声并可试听——再也不会错过重要事项。</p>
+                        <h3>文件分析 - 上传</h3>
+                        <p>支持多种文档格式的智能分析。上传文档后，AI 会自动解析内容结构，生成结构化的思维导图。</p>
                         <ul class="feature-list">
-                            <li>自定义精确提醒时间</li>
-                            <li>快捷选项：今天 / 明天 / 自定义日期</li>
-                            <li>灵活重复：不重复 / 每天 / 每周 / 每月 / 每年</li>
-                            <li>多种铃声，支持试听选择</li>
+                            <li>支持 PDF / TXT / DOCX / Markdown</li>
+                            <li>拖拽上传简单便捷</li>
+                            <li>自动解析文档结构</li>
+                            <li>生成文档摘要</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- 功能5：便签模板 -->
                 <div class="feature-block feature-block-left reveal">
                     <div class="feature-block-text">
                         <div class="feature-num">05</div>
-                        <h3>便签模板系统</h3>
-                        <p>不知道怎么开始写？内置 6 种实用模板一键套用：会议纪要、待办清单、读书笔记、项目计划、日程安排、学习计划。选好模板，填入内容，一张结构清晰的便签就完成了。</p>
+                        <h3>文件分析 - 结果</h3>
+                        <p>文档分析完成后，呈现清晰的结构化结果。思维导图、关键词提取、内容摘要，帮助你快速理解文档。</p>
                         <ul class="feature-list">
-                            <li>会议纪要模板——会后整理不遗漏</li>
-                            <li>待办清单模板——任务追踪更高效</li>
-                            <li>读书笔记 / 项目计划 / 日程安排 / 学习计划</li>
-                            <li>一键套用，开箱即用</li>
+                            <li>可视化思维导图</li>
+                            <li>关键词自动提取</li>
+                            <li>文档内容摘要</li>
+                            <li>一键生成便签笔记</li>
                         </ul>
                     </div>
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_5.png" alt="便签模板">
+                            <img src="images/文件分析2.png" alt="文件分析结果">
                         </div>
                     </div>
                 </div>
 
-                <!-- 功能6：分享功能 -->
                 <div class="feature-block feature-block-right reveal">
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_6.png" alt="分享功能">
+                            <img src="images/智能提醒界面.png" alt="智能提醒">
                         </div>
                     </div>
                     <div class="feature-block-text">
                         <div class="feature-num">06</div>
-                        <h3>多平台分享</h3>
-                        <p>写好的便签，一键分享给同事和朋友。支持 QQ、微信、QQ 空间、微博四大平台直接分享，也可以复制链接发送给任何人——协作沟通，就在指尖。</p>
+                        <h3>智能提醒界面</h3>
+                        <p>为重要便签设置提醒，支持精确的时间设置和重复提醒。多种提醒铃声可选，确保不会错过任何重要事项。</p>
                         <ul class="feature-list">
-                            <li>QQ / 微信 / QQ 空间 / 微博直达分享</li>
-                            <li>复制链接，任意平台发送</li>
-                            <li>分享格式自动适配目标平台</li>
-                            <li>团队协作的好帮手</li>
+                            <li>精确到分钟的提醒设置</li>
+                            <li>重复提醒支持</li>
+                            <li>多种铃声选择</li>
+                            <li>提醒历史记录</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- 功能7：任务栏管理 -->
                 <div class="feature-block feature-block-left reveal">
                     <div class="feature-block-text">
                         <div class="feature-num">07</div>
-                        <h3>任务栏管理</h3>
-                        <p>任务栏是天枢便签的组织核心。右键点击任务栏标签，可以重命名、收藏、清空、删除，还能一键导出整个任务栏。特别值得一提的是 AI 智能排序——让 AI 根据内容相关性自动排列便签顺序。双击任务栏标签，还能将它分离为独立窗口，多屏办公更高效。</p>
+                        <h3>便签任务栏</h3>
+                        <p>灵活的任务栏管理，支持创建多个任务栏来组织不同类别的便签。每个任务栏独立管理，方便切换。</p>
                         <ul class="feature-list">
-                            <li>右键菜单：重命名 / 收藏 / 清空 / 删除 / 导出</li>
-                            <li>AI 智能排序，自动优化便签排列</li>
-                            <li>双击分离为独立窗口，支持多屏办公</li>
-                            <li>任务栏级别收藏，快速切换工作区</li>
+                            <li>创建多个任务栏</li>
+                            <li>任务栏重命名</li>
+                            <li>任务栏收藏置顶</li>
+                            <li>任务栏导出备份</li>
                         </ul>
                     </div>
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_22.png" alt="任务栏管理功能展示">
+                            <img src="images/便签任务栏.png" alt="便签任务栏">
                         </div>
                     </div>
                 </div>
 
-                <!-- 功能8：便签操作 -->
                 <div class="feature-block feature-block-right reveal">
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_8.png" alt="便签右键菜单">
+                            <img src="images/便签模板.png" alt="便签模板">
                         </div>
                     </div>
                     <div class="feature-block-text">
                         <div class="feature-num">08</div>
-                        <h3>便签快捷操作</h3>
-                        <p>右键点击任意便签卡片，即可弹出快捷操作菜单：编辑内容、复制标题、设置提醒、置顶显示、删除移入回收站——常用操作一步到位，无需进入编辑界面。</p>
+                        <h3>便签模板</h3>
+                        <p>内置多种实用模板，一键套用快速创建便签。会议记录、待办清单、读书笔记，各种场景全覆盖。</p>
                         <ul class="feature-list">
-                            <li>右键菜单，常用操作一步到位</li>
-                            <li>快速编辑 / 复制标题 / 设置提醒</li>
-                            <li>置顶重要便签，始终可见</li>
-                            <li>删除移入回收站，安全可控</li>
+                            <li>会议纪要模板</li>
+                            <li>待办清单模板</li>
+                            <li>读书笔记模板</li>
+                            <li>自定义模板支持</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- 功能9：搜索功能 -->
                 <div class="feature-block feature-block-left reveal">
                     <div class="feature-block-text">
                         <div class="feature-num">09</div>
-                        <h3>智能搜索</h3>
-                        <p>在顶部搜索框输入关键词，结果实时呈现——匹配的文字会高亮显示，让你一眼找到目标便签。无论便签数量多少，搜索都能即时响应。</p>
+                        <h3>便签搜索</h3>
+                        <p>强大的搜索功能，帮助你快速定位需要的便签。支持关键词高亮，搜索结果实时更新。</p>
                         <ul class="feature-list">
-                            <li>输入即搜索，实时响应零延迟</li>
-                            <li>关键词匹配文字高亮显示</li>
-                            <li>全便签内容搜索，不遗漏任何信息</li>
-                            <li>海量便签也能快速定位</li>
+                            <li>实时搜索响应</li>
+                            <li>关键词高亮显示</li>
+                            <li>标题内容全文搜索</li>
+                            <li>搜索历史记录</li>
                         </ul>
                     </div>
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_9.png" alt="搜索功能">
+                            <img src="images/便签搜索.png" alt="便签搜索">
                         </div>
                     </div>
                 </div>
 
-                <!-- 功能10：收藏与回收站 -->
                 <div class="feature-block feature-block-right reveal">
-                    <div class="feature-block-img feature-block-img-dual">
+                    <div class="feature-block-img feature-block-img-triple">
                         <div class="img-frame">
-                            <img src="images/screenshot_10.png" alt="收藏视图">
+                            <img src="images/中英切换.png" alt="中英切换">
                         </div>
                         <div class="img-frame">
-                            <img src="images/screenshot_11.png" alt="回收站">
+                            <img src="images/主题切换.png" alt="主题切换">
+                        </div>
+                        <div class="img-frame">
+                            <img src="images/任务栏分离.png" alt="任务栏分离">
                         </div>
                     </div>
                     <div class="feature-block-text">
                         <div class="feature-num">10</div>
-                        <h3>收藏与回收站</h3>
-                        <p>重要的任务栏可以一键收藏，在独立的收藏视图中快速访问。不小心删除的内容会进入回收站，随时可以恢复——双重保险，让数据管理更安心。</p>
+                        <h3>个性化设置</h3>
+                        <p>丰富的个性化设置选项，让软件更符合你的使用习惯。语言切换、主题选择、任务栏分离等功能应有尽有。</p>
                         <ul class="feature-list">
-                            <li>独立收藏视图，重要内容触手可及</li>
-                            <li>任务栏级别收藏管理</li>
-                            <li>回收站自动暂存已删除内容</li>
-                            <li>一键恢复，数据安全有保障</li>
+                            <li>中英文双语切换</li>
+                            <li>多种主题配色</li>
+                            <li>任务栏分离成独立窗口</li>
+                            <li>快捷键自定义</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- 功能11：中英文双语支持 -->
                 <div class="feature-block feature-block-left reveal">
                     <div class="feature-block-text">
                         <div class="feature-num">11</div>
-                        <h3>中英文双语支持</h3>
-                        <p>按下 Ctrl+1，界面语言在简体中文和 English 之间瞬间切换。所有界面元素全面适配，包括菜单、按钮、提示文字——服务全球用户，从切换语言开始。</p>
+                        <h3>智能排序</h3>
+                        <p>AI 驱动的智能排序功能，根据便签内容相关性自动优化排列顺序，让重要内容优先展示。</p>
                         <ul class="feature-list">
-                            <li>简体中文 / English 原生双语</li>
-                            <li>Ctrl+1 一键切换，即时生效</li>
-                            <li>全部界面元素深度适配</li>
-                            <li>国际化设计，面向全球用户</li>
+                            <li>AI 内容相关性分析</li>
+                            <li>自动优化排序</li>
+                            <li>多种排序规则可选</li>
+                            <li>手动调整支持</li>
                         </ul>
                     </div>
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_19.png" alt="语言设置">
+                            <img src="images/智能排序.png" alt="智能排序">
                         </div>
                     </div>
                 </div>
 
-                <!-- 功能12：主题设置 -->
                 <div class="feature-block feature-block-right reveal">
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_12.png" alt="主题设置">
+                            <img src="images/续写.png" alt="AI 续写">
                         </div>
                     </div>
                     <div class="feature-block-text">
                         <div class="feature-num">12</div>
-                        <h3>多主题切换</h3>
-                        <p>按下 Ctrl+4，在浅色、深色、护眼三种主题之间自由切换。浅色模式适合白天办公，深色模式保护夜间视力，护眼模式降低蓝光——无论何时使用，都能找到最舒适的视觉体验。</p>
+                        <h3>AI 续写</h3>
+                        <p>写作卡壳了？AI 续写功能帮你继续创作。根据已有内容，智能生成后续文字，激发你的创作灵感。</p>
                         <ul class="feature-list">
-                            <li>浅色模式——清爽明亮，适合日间使用</li>
-                            <li>深色模式——柔和暗色调，夜间更护眼</li>
-                            <li>护眼模式——低蓝光，长时间使用不疲劳</li>
-                            <li>Ctrl+4 一键切换，即时生效</li>
+                            <li>智能内容续写</li>
+                            <li>多种写作风格</li>
+                            <li>自动保存草稿</li>
+                            <li>一键插入原文</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- 功能13：天枢精灵 AI 助手 -->
                 <div class="feature-block feature-block-left reveal">
                     <div class="feature-block-text">
                         <div class="feature-num">13</div>
-                        <h3>天枢精灵 AI 助手</h3>
-                        <p>按下 Ctrl+3 唤出"天枢精灵"——这是内置在你的便签工具里的 AI 智能助手。它不仅能回答软件使用问题、提供功能指导，还能直接帮你写便签、新建任务栏，甚至进行日常闲聊。就像身边多了一个效率顾问。</p>
+                        <h3>收藏</h3>
+                        <p>重要的便签和任务栏可以一键收藏，在收藏视图中快速访问，常用内容触手可及。</p>
                         <ul class="feature-list">
-                            <li>智能问答，解答软件使用疑问</li>
-                            <li>语音指令：帮写便签 / 新建任务栏</li>
-                            <li>内置帮助文档与常见问题库</li>
-                            <li>Ctrl+3 随时唤起，即问即答</li>
+                            <li>便签与任务栏收藏</li>
+                            <li>独立收藏视图</li>
+                            <li>收藏分类管理</li>
+                            <li>快速切换访问</li>
                         </ul>
                     </div>
-                    <div class="feature-block-img feature-block-img-dual">
+                    <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_15.png" alt="天枢精灵">
-                        </div>
-                        <div class="img-frame">
-                            <img src="images/screenshot_16.png" alt="帮助文档">
+                            <img src="images/收藏.png" alt="收藏">
                         </div>
                     </div>
                 </div>
 
-                <!-- 功能14：快捷键设置 -->
                 <div class="feature-block feature-block-right reveal">
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_13.png" alt="快捷键设置">
+                            <img src="images/回收站.png" alt="回收站">
                         </div>
                     </div>
                     <div class="feature-block-text">
                         <div class="feature-num">14</div>
-                        <h3>全局快捷键</h3>
-                        <p>5 组快捷键覆盖所有核心功能，让双手不离键盘就能完成一切操作：Ctrl+1 切换语言、Ctrl+2 新建任务栏、Ctrl+3 打开天枢精灵、Ctrl+4 切换主题、Ctrl+5 打开文档分析——效率用户的标配。</p>
+                        <h3>回收站</h3>
+                        <p>误删除不用担心，回收站功能帮你找回。支持一键恢复和永久删除，数据管理更安心。</p>
                         <ul class="feature-list">
-                            <li>Ctrl+1 切换中英文语言</li>
-                            <li>Ctrl+2 快速新建任务栏</li>
-                            <li>Ctrl+3 唤出天枢精灵 AI 助手</li>
-                            <li>Ctrl+4 切换主题 / Ctrl+5 文档分析</li>
+                            <li>删除内容自动暂存</li>
+                            <li>一键恢复功能</li>
+                            <li>永久删除选项</li>
+                            <li>回收站清空</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- 功能15：关于页面 -->
                 <div class="feature-block feature-block-left reveal">
                     <div class="feature-block-text">
                         <div class="feature-num">15</div>
-                        <h3>关于天枢便签</h3>
-                        <p>简洁优雅的关于页面，展示应用版本信息与品牌标识。当前版本 v1.0.0——这只是起点，更多功能正在持续迭代中。</p>
+                        <h3>分享</h3>
+                        <p>轻松分享你的便签内容。支持多种分享方式，让协作更加便捷。</p>
                         <ul class="feature-list">
-                            <li>品牌图标与视觉标识展示</li>
-                            <li>当前版本 v1.0.0</li>
-                            <li>产品定位与技术理念说明</li>
-                            <li>持续迭代，未来可期</li>
+                            <li>一键分享到多个平台</li>
+                            <li>复制链接分享</li>
+                            <li>导出为文件分享</li>
+                            <li>分享权限设置</li>
                         </ul>
                     </div>
                     <div class="feature-block-img">
                         <div class="img-frame">
-                            <img src="images/screenshot_14.png" alt="关于页面">
+                            <img src="images/分享.png" alt="分享">
                         </div>
+                    </div>
+                </div>
+
+                <div class="feature-block feature-block-right reveal">
+                    <div class="feature-block-img">
+                        <div class="img-frame">
+                            <img src="images/导出文件.png" alt="导出文件">
+                        </div>
+                    </div>
+                    <div class="feature-block-text">
+                        <div class="feature-num">16</div>
+                        <h3>导出文件</h3>
+                        <p>支持多种格式的文件导出，满足不同场景的需求。PDF、Word、Markdown、HTML 等格式一应俱全。</p>
+                        <ul class="feature-list">
+                            <li>PDF 格式导出</li>
+                            <li>Word 文档导出</li>
+                            <li>Markdown 格式</li>
+                            <li>HTML 网页格式</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="feature-block feature-block-left reveal">
+                    <div class="feature-block-text">
+                        <div class="feature-num">17</div>
+                        <h3>快捷键</h3>
+                        <p>丰富的全局快捷键支持，双手不离键盘完成所有操作，效率达人必备功能。</p>
+                        <ul class="feature-list">
+                            <li>全局快捷键支持</li>
+                            <li>快捷键自定义</li>
+                            <li>快捷键查看面板</li>
+                            <li>冲突检测提示</li>
+                        </ul>
+                    </div>
+                    <div class="feature-block-img">
+                        <div class="img-frame">
+                            <img src="images/快捷键.png" alt="快捷键">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-block feature-block-right reveal">
+                    <div class="feature-block-img">
+                        <div class="img-frame">
+                            <img src="images/帮助文档.png" alt="帮助文档">
+                        </div>
+                    </div>
+                    <div class="feature-block-text">
+                        <div class="feature-num">18</div>
+                        <h3>帮助文档</h3>
+                        <p>内置详细的帮助文档，从入门到精通，手把手教你使用所有功能。常见问题解答，让你遇到问题不慌张。</p>
+                        <ul class="feature-list">
+                            <li>详细功能说明</li>
+                            <li>入门教程</li>
+                            <li>常见问题解答</li>
+                            <li>视频教程链接</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 核心亮点 -->
     <section class="section section-highlights" id="highlights">
         <div class="section-inner">
             <div class="section-label center">
@@ -497,8 +534,8 @@
                 核心亮点
                 <span class="label-line"></span>
             </div>
-            <h2 class="section-title reveal">为什么选择天枢便签</h2>
-            <p class="section-subtitle reveal">六大核心优势，让评委和用户一眼记住</p>
+            <h2 class="section-title reveal">为什么选择 PolaristNote</h2>
+            <p class="section-subtitle reveal">八大核心优势，让评委和用户一眼记住</p>
 
             <div class="highlights-grid">
                 <div class="hl-card reveal">
@@ -506,48 +543,47 @@
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>
                     </div>
                     <h3>AI 深度集成</h3>
-                    <p>不是简单的 API 调用，而是将 AI 能力融入便签创建、文档分析、智能问答、智能排序等核心工作流——AI 不只是附加功能，而是产品体验的基石。</p>
+                    <p>不只是简单的 API 调用——AI 已深度融入便签创建、文档分析、智能问答、内容续写等每个环节。让 AI 真正成为你的工作伙伴！</p>
                 </div>
                 <div class="hl-card reveal">
                     <div class="hl-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
                     </div>
                     <h3>看板式管理</h3>
-                    <p>借鉴 Trello、Notion 的看板理念，以任务栏为维度组织便签。创建、分类、排序、分离窗口——直观高效的项目管理方式，学习成本几乎为零。</p>
+                    <p>借鉴 Trello 与 Notion 的先进理念，以任务栏为核心组织工作。直观的拖拽操作，零学习成本即可让项目管理井井有条！</p>
                 </div>
                 <div class="hl-card reveal">
                     <div class="hl-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
                     <h3>跨平台原生体验</h3>
-                    <p>基于 Qt 6 框架开发，一套代码在 Windows、macOS、Linux 上均能获得原生级别的界面体验与性能表现，真正实现"一次开发，三端运行"。</p>
+                    <p>基于 Qt 6 打造，Windows、macOS、Linux 全平台完美运行。一套代码，三端原生体验，性能与颜值兼具！</p>
                 </div>
                 <div class="hl-card reveal">
                     <div class="hl-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <h3>隐私至上</h3>
-                    <p>所有数据本地 SQLite 存储，不上传任何云端服务器。支持备份与多格式导出，重要数据完全由用户掌控——断网也能正常使用全部功能。</p>
+                    <p>数据全部本地 SQLite 存储，绝不上云！支持备份与多格式导出，你的数据你做主——断网也能畅用所有功能！</p>
                 </div>
                 <div class="hl-card reveal">
                     <div class="hl-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10a15.3 15.3 0 0 1-4 10a15.3 15.3 0 0 1-4-10a15.3 15.3 0 0 1 4-10z"/></svg>
                     </div>
                     <h3>国际化支持</h3>
-                    <p>原生中英文双语支持，快捷键一键切换。界面元素从菜单到提示文字全面适配，为走向国际市场做好了充分准备。</p>
+                    <p>原生中英文双语一键切换，所有界面深度适配。从国内到国际，PolaristNote 都能给你最贴心的体验！</p>
                 </div>
                 <div class="hl-card reveal">
                     <div class="hl-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                     </div>
                     <h3>开源免费</h3>
-                    <p>完全开源、免费使用，代码透明可审计。采用 CMake 构建系统，欢迎社区贡献代码，共同打造更好的桌面效率工具。</p>
+                    <p>完全开源、永久免费，代码透明可审计！欢迎社区贡献，一起打造更好的桌面效率工具！</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 技术架构 -->
     <section class="section section-tech" id="tech">
         <div class="section-inner">
             <div class="section-label center">
@@ -591,31 +627,31 @@
 
             <div class="tech-screenshots reveal">
                 <div class="tech-ss-item">
-                    <img src="images/screenshot_1.png" alt="主界面">
-                    <span class="tech-ss-label">主界面</span>
+                    <img src="images/看板页面.png" alt="主界面">
+                    <span class="tech-ss-label">看板主界面</span>
                 </div>
                 <div class="tech-ss-item">
-                    <img src="images/screenshot_3.png" alt="编辑器">
+                    <img src="images/富文本编辑界面.png" alt="编辑器">
                     <span class="tech-ss-label">富文本编辑</span>
                 </div>
                 <div class="tech-ss-item">
-                    <img src="images/screenshot_2.png" alt="文档分析">
+                    <img src="images/文件分析1.png" alt="文档分析">
                     <span class="tech-ss-label">文档分析</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 下载区域 -->
     <section class="section section-download" id="download">
         <div class="section-inner">
             <div class="download-card reveal">
                 <div class="download-card-glow"></div>
                 <div class="download-content">
-                    <h2>立即下载天枢便签</h2>
-                    <p>完全免费 · 开源透明 · 三大平台原生支持</p>
+                    <h2>立即下载 PolaristNote</h2>
+                    <p>完全免费 · 开源透明 · 三大平台原生支持，开启你的高效笔记之旅！</p>
+                    
                     <div class="download-platforms">
-                        <a href="https://github.com/yan-stone-computer/polarisnote-official-site/releases/download/windowsPackage/palarisNoteApplication_community.zip" class="dl-platform" data-platform="Windows">
+                        <a href="https://github.com/yan-stone-computer/PolaristNote/releases/download/windowsPackage/palarisNoteApplication_community.zip" class="dl-platform" data-platform="Windows">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
                             <div>
                                 <strong>Windows</strong>
@@ -630,20 +666,33 @@
                             </div>
                         </a>
                         <a href="#" class="dl-platform" data-platform="Linux">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.368 1.884 1.43.868.074 1.741-.116 2.476-.74.34-.283.607-.595.858-.868.045-.046.09-.09.135-.131.003-.003.003-.003.006-.006l.003-.003c.3-.334.566-.7.7-1.092.065-.2.116-.398.116-.601v-.007c.003-.2-.03-.398-.087-.597-.116-.398-.313-.727-.535-1.027-.214-.292-.45-.566-.66-.832-.26-.3-.466-.6-.628-.926-.322-.646-.39-1.394-.3-2.199.012-.116.03-.234.047-.351.09-.7.134-1.399.047-2.065-.088-.68-.327-1.32-.813-1.801-.5-.501-1.224-.8-2.086-.868a4.08 4.08 0 00-.5-.034c-.56 0-1.037.116-1.394.333-.384.2-.657.5-.825.832-.174.334-.249.7-.266 1.065-.015.366.03.727.09 1.06.058.334.135.66.18.97.09.6.066 1.13-.145 1.577-.391.793-1.027 1.2-1.717 1.33-.68.131-1.42.066-2.09-.131a.476.476 0 00-.174-.034c-.06 0-.116.015-.166.046-.09.06-.12.166-.135.267-.015.135.015.267.06.398.046.135.116.267.166.4.136.268.2.468.2.668 0 .2-.063.4-.263.668-.2.268-.535.467-.94.467h-.003c-.398 0-.727-.199-.94-.466-.2-.268-.266-.6-.266-.933 0-.2.03-.4.063-.566.03-.168.066-.3.066-.4 0-.135-.03-.234-.116-.334-.083-.1-.233-.168-.466-.2-.398-.065-.666-.232-.832-.465-.166-.234-.199-.535-.166-.868.066-.665.464-1.397.864-2.063.4-.668.8-1.3.8-1.866 0-.3-.1-.566-.3-.8-.2-.233-.5-.4-.865-.5-.732-.2-1.6-.2-2.265-.065-.665.131-1.13.4-1.33.8-.1.2-.135.4-.116.6.016.2.083.4.166.566.166.334.4.6.6.868.1.135.2.266.266.4.066.131.1.268.1.398 0 .2-.066.4-.266.6-.2.2-.5.334-.865.334"/></svg>
+                            <img src="images/linux.svg" alt="Linux" style="width: 28px; height: 28px;">
                             <div>
                                 <strong>Linux</strong>
                                 <span>Ubuntu 20.04+</span>
                             </div>
                         </a>
                     </div>
+
+                    <div class="github-section">
+                        <a href="https://github.com/yan-stone-computer/PolaristNote" class="github-btn" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <span>在 GitHub 上查看</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+
                     <p class="download-meta">v1.0.0 · 完全免费 · 开源软件</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-top">
@@ -669,20 +718,20 @@
                     </div>
                     <div class="footer-col">
                         <h5>资源</h5>
-                        <a href="#">使用文档</a>
-                        <a href="#">常见问题</a>
-                        <a href="#">更新日志</a>
+                        <a href="#features">使用文档</a>
+                        <a href="#features">常见问题</a>
+                        <a href="#features">更新日志</a>
                     </div>
                     <div class="footer-col">
                         <h5>关于</h5>
-                        <a href="#">项目介绍</a>
-                        <a href="#">GitHub</a>
-                        <a href="#">联系我们</a>
+                        <a href="#overview">项目介绍</a>
+                        <a href="https://github.com/yan-stone-computer/PolaristNote" target="_blank">GitHub</a>
+                        <a href="https://github.com/yan-stone-computer/PolaristNote/issues" target="_blank">联系我们</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 天枢便签 Palaris Note. All rights reserved.</p>
+                <p>&copy; 2026 天枢便签 PolaristNote. All rights reserved.</p>
             </div>
         </div>
     </footer>
