@@ -86,9 +86,10 @@
     // 平滑滚动
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
+            if (target && href.length > 1) {
+                e.preventDefault();
                 const offset = navbar.offsetHeight + 16;
                 const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
                 window.scrollTo({ top, behavior: 'smooth' });
@@ -234,16 +235,18 @@
     }
 
     // ─── 下载按钮交互 ───
-    document.querySelectorAll('.dl-platform').forEach(btn => {
+    document.querySelectorAll('.dl-platform, .platform-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            const platform = btn.dataset.platform;
+            const platform = btn.dataset.platform || btn.querySelector('strong')?.textContent || '软件';
             const href = btn.getAttribute('href');
 
-            if (!href || href === '#') {
+            // 如果是外部链接或者下载链接，不要阻止默认行为
+            if (href && !href.startsWith('#')) {
+                showToast(`正在跳转到下载页面...`);
+                // 不阻止默认行为，让浏览器正常处理
+            } else if (!href || href === '#') {
                 e.preventDefault();
                 showToast(`${platform} 版本即将推出，敬请期待！`);
-            } else {
-                showToast(`正在下载 ${platform} 版本...`);
             }
         });
     });
@@ -407,7 +410,7 @@
 
     // ─── 为按钮添加涟漪效果 ───
     function addRippleEffect() {
-        document.querySelectorAll('.btn, .github-btn, .dl-platform').forEach(button => {
+        document.querySelectorAll('.btn, .github-btn, .dl-platform, .platform-btn').forEach(button => {
             button.addEventListener('click', function(e) {
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
