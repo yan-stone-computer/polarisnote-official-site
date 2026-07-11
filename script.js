@@ -234,72 +234,22 @@
         });
     }
 
-    // ─── 下载按钮交互 ───
-    document.querySelectorAll('.dl-platform, .platform-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const platform = btn.dataset.platform || btn.querySelector('strong')?.textContent || '软件';
-            const href = btn.getAttribute('href');
-
-            // 如果是外部链接或者下载链接，不要阻止默认行为
-            if (href && !href.startsWith('#')) {
-                showToast(`正在跳转到下载页面...`);
-                // 不阻止默认行为，让浏览器正常处理
-            } else if (!href || href === '#') {
-                e.preventDefault();
-                showToast(`${platform} 版本即将推出，敬请期待！`);
+    // ─── 提取码复制 ───
+    window.copyExtractCode = function() {
+        const code = document.getElementById('extractCode');
+        if (!code) return;
+        const text = code.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = document.querySelector('.extract-copy');
+            if (btn) {
+                btn.classList.add('copied');
+                setTimeout(() => btn.classList.remove('copied'), 2000);
             }
+            showToast(`提取码 ${text} 已复制到剪贴板`);
+        }).catch(() => {
+            showToast('复制失败，请手动复制提取码');
         });
-    });
-
-    // ─── 平台卡片粒子效果 ───
-    function createParticleBurst(element, color) {
-        const rect = element.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        
-        for (let i = 0; i < 12; i++) {
-            const particle = document.createElement('div');
-            particle.style.cssText = `
-                position: fixed;
-                width: 8px;
-                height: 8px;
-                background: ${color};
-                border-radius: 50%;
-                pointer-events: none;
-                z-index: 9998;
-                left: ${centerX}px;
-                top: ${centerY}px;
-                box-shadow: 0 0 10px ${color};
-            `;
-            
-            const angle = (i / 12) * Math.PI * 2;
-            const velocity = 80 + Math.random() * 60;
-            const dx = Math.cos(angle) * velocity;
-            const dy = Math.sin(angle) * velocity;
-            
-            document.body.appendChild(particle);
-            
-            particle.animate([
-                { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
-                { transform: `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) scale(0)`, opacity: 0 }
-            ], {
-                duration: 600,
-                easing: 'cubic-bezier(0.16, 1, 0.3, 1)'
-            }).onfinish = () => particle.remove();
-        }
-    }
-
-    document.querySelectorAll('.platform-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            let color = 'rgba(59, 130, 246, 0.8)';
-            if (card.classList.contains('platform-windows')) color = 'rgba(59, 130, 246, 0.8)';
-            else if (card.classList.contains('platform-mac')) color = 'rgba(148, 163, 184, 0.8)';
-            else if (card.classList.contains('platform-linux')) color = 'rgba(249, 115, 22, 0.8)';
-            else if (card.classList.contains('platform-github')) color = 'rgba(129, 140, 248, 0.8)';
-            
-            createParticleBurst(card, color);
-        });
-    });
+    };
 
     // ─── 通知提示 ───
     function showNotification(message) {
@@ -410,7 +360,7 @@
 
     // ─── 为按钮添加涟漪效果 ───
     function addRippleEffect() {
-        document.querySelectorAll('.btn, .github-btn, .dl-platform, .platform-btn').forEach(button => {
+        document.querySelectorAll('.btn, .github-btn, .get-btn').forEach(button => {
             button.addEventListener('click', function(e) {
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
