@@ -1519,6 +1519,56 @@ a {
     transform: translateY(-2px);
 }
 
+/* --- Disk Selector --- */
+.disk-selector {
+    display: flex;
+    gap: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+    background: var(--c-bg-subtle);
+}
+
+.disk-tab {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: var(--font-body);
+    color: var(--c-text-muted);
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.disk-tab:first-child {
+    border-right: 1px solid var(--c-border);
+}
+
+.disk-tab:hover {
+    color: var(--c-text);
+    background: rgba(59, 130, 246, 0.04);
+}
+
+.disk-tab.active {
+    background: var(--c-primary);
+    color: #fff;
+    font-weight: 600;
+}
+
+.disk-tab-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    transition: filter 0.25s ease;
+}
+
 /* --- Extract Code --- */
 .get-card-extract {
     display: flex;

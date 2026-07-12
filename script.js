@@ -234,6 +234,40 @@
         });
     }
 
+    // ─── 网盘切换 ───
+    const diskConfig = {
+        baidu: {
+            link: 'https://pan.baidu.com/s/1N_CNo7ET2BExnm_U3EUv9w?pwd=c7zq',
+            code: 'c7zq'
+        },
+        quark: {
+            link: 'https://pan.quark.cn/s/e4066358ec77?pwd=kuLm',
+            code: 'kuLm'
+        }
+    };
+
+    let currentDisk = 'baidu';
+
+    window.switchDisk = function(disk) {
+        if (currentDisk === disk) return;
+        currentDisk = disk;
+        const config = diskConfig[disk];
+        if (!config) return;
+
+        // 切换标签状态
+        document.querySelectorAll('.disk-tab').forEach(function(t) {
+            t.classList.toggle('active', t.getAttribute('data-disk') === disk);
+        });
+
+        // 更新下载链接
+        var link = document.getElementById('diskDownloadLink');
+        if (link) link.href = config.link;
+
+        // 更新提取码
+        var code = document.getElementById('extractCode');
+        if (code) code.textContent = config.code;
+    };
+
     // ─── 提取码复制 ───
     window.copyExtractCode = function() {
         const code = document.getElementById('extractCode');
