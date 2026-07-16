@@ -235,14 +235,15 @@
     }
 
     // ─── 网盘切换 ───
+    // ─── Windows 网盘切换 ───
     const diskConfig = {
         baidu: {
-            link: 'https://pan.baidu.com/s/1N_CNo7ET2BExnm_U3EUv9w?pwd=c7zq',
-            code: 'c7zq'
+            link: 'https://pan.baidu.com/s/1-TG4pqjO3LaUnH2J-sqVtQ?pwd=veuq',
+            code: 'veuq'
         },
         quark: {
-            link: 'https://pan.quark.cn/s/e4066358ec77?pwd=kuLm',
-            code: 'kuLm'
+            link: 'https://pan.quark.cn/s/738e11ee9294?pwd=KxMn',
+            code: 'KxMn'
         }
     };
 
@@ -268,13 +269,61 @@
         if (code) code.textContent = config.code;
     };
 
-    // ─── 提取码复制 ───
+    // ─── Windows 提取码复制 ───
     window.copyExtractCode = function() {
         const code = document.getElementById('extractCode');
         if (!code) return;
         const text = code.textContent;
         navigator.clipboard.writeText(text).then(() => {
             const btn = document.querySelector('.extract-copy');
+            if (btn) {
+                btn.classList.add('copied');
+                setTimeout(() => btn.classList.remove('copied'), 2000);
+            }
+            showToast(`提取码 ${text} 已复制到剪贴板`);
+        }).catch(() => {
+            showToast('复制失败，请手动复制提取码');
+        });
+    };
+
+    // ─── Linux 网盘切换 ───
+    const diskConfigLinux = {
+        'baidu-linux': {
+            link: 'https://pan.baidu.com/s/138n-BojXm_eNLB32Gvospw?pwd=f4et',
+            code: 'f4et'
+        },
+        'quark-linux': {
+            link: 'https://pan.quark.cn/s/776b64fab3f2?pwd=aAXa',
+            code: 'aAXa'
+        }
+    };
+
+    let currentDiskLinux = 'baidu-linux';
+
+    window.switchDiskLinux = function(disk) {
+        if (currentDiskLinux === disk) return;
+        currentDiskLinux = disk;
+        const config = diskConfigLinux[disk];
+        if (!config) return;
+
+        document.querySelectorAll('.disk-tab-linux').forEach(function(t) {
+            t.classList.toggle('active', t.getAttribute('data-disk') === disk);
+        });
+
+        var link = document.getElementById('diskDownloadLinkLinux');
+        if (link) link.href = config.link;
+
+        var code = document.getElementById('extractCodeLinux');
+        if (code) code.textContent = config.code;
+    };
+
+    // ─── Linux 提取码复制 ───
+    window.copyExtractCodeLinux = function() {
+        const code = document.getElementById('extractCodeLinux');
+        if (!code) return;
+        const text = code.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = document.getElementById('extractCopyLinux');
             if (btn) {
                 btn.classList.add('copied');
                 setTimeout(() => btn.classList.remove('copied'), 2000);
